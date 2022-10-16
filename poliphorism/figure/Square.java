@@ -1,4 +1,4 @@
-package Poliphorism.Figure;
+package poliphorism.figure;
 
 public class Square implements Figure {
    private int a;

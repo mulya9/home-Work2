@@ -1,4 +1,4 @@
-package Poliphorism.Figure;
+package poliphorism.figure;
 
 public class Triangle implements Figure {
     private int a;
