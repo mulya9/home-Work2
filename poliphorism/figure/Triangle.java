@@ -4,7 +4,6 @@ public class Triangle implements Figure {
     private int a;
     private int b;
     private int c;
-    private int s;
 
     public Triangle(int a, int b, int c) {
         this.a = a;
@@ -13,8 +12,7 @@ public class Triangle implements Figure {
     }
 
     public double figureArea() {
-        s = a+b+c*2;
-        return s;
+        return  a+b+c*2;
     }
 
     public int getA() {
@@ -40,12 +38,5 @@ public class Triangle implements Figure {
     public void setC(int c) {
         this.c = c;
     }
-
-    public int getS() {
-        return s;
-    }
-
-    public void setS(int s) {
-        this.s = s;
-    }
 }
+
