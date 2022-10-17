@@ -13,9 +13,8 @@ public class HomeWorkApp {
 
     public static void checkSumSign() {
         int a = 2;
-        int b = -6;
-        int sum = a + b;
-        if (sum >= 0) {
+        int b = 4;
+        if (a + b >= 0) {
             System.out.println("Sum is positive");
         } else {
             System.out.println("Sum is negative");
