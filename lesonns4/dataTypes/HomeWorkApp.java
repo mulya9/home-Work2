@@ -13,8 +13,9 @@ public class HomeWorkApp {
 
     public static void checkSumSign() {
         int a = 2;
-        int b = -3;
-        if (a + b > 0 && a + b != 0) {
+        int b = -6;
+        int sum = a + b;
+        if (sum >= 0) {
             System.out.println("Sum is positive");
         } else {
             System.out.println("Sum is negative");
@@ -29,12 +30,10 @@ public class HomeWorkApp {
             System.out.println("Yellow");
         } else if (value > 100) {
             System.out.println("Green");
-        } else {
-            return;
         }
     }
 
-    public static void numbers() {
+    public static void compareNumbers() {
         int a = 4;
         int b = 6;
         if (a >= b) {
@@ -45,7 +44,9 @@ public class HomeWorkApp {
     }
 
     public static boolean numberRange(int a, int b) {
-        if (a + b == 10 && a + b > 20 && a + b == 20)
+        a = 3;
+        b = 14;
+        if (a + b >= 10 && a + b <= 20)
             return true;
         else {
             return false;
