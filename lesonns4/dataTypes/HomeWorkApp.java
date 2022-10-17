@@ -3,7 +3,6 @@ package lesonns4.dataTypes;
 public class HomeWorkApp {
     public static void main(String[] args) {
 
-
     }
 
     public static void printThreeWords() {
@@ -14,9 +13,8 @@ public class HomeWorkApp {
 
     public static void checkSumSign() {
         int a = 2;
-        int b = 3;
-        int i = a + b;
-        if (i >= 0) {
+        int b = -3;
+        if (a + b > 0 && a + b != 0) {
             System.out.println("Sum is positive");
         } else {
             System.out.println("Sum is negative");
