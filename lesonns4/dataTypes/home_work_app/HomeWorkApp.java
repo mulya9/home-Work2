@@ -1,4 +1,4 @@
-package lesonns4.dataTypes;
+package lesonns4.dataTypes.home_work_app;
 
 public class HomeWorkApp {
     public static void main(String[] args) {

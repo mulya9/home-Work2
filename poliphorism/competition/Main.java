@@ -11,8 +11,6 @@ public class Main {
         Treadmill treadmill = new Treadmill(270, " Treadmill ");
         Wall wall = new Wall(1.5, " Wall ");
 
-        human.run(treadmill.getName());
-        cat.jump(wall.getName());
 
 
         List<Participant> participants = new ArrayList<>();
