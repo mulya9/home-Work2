@@ -11,8 +11,6 @@ public class Main {
         Treadmill treadmill = new Treadmill(270, " Treadmill ");
         Wall wall = new Wall(1.5, " Wall ");
 
-        human.run(treadmill.getName());
-        cat.jump(wall.getName());
 
 
         List<Participant> participants = new ArrayList<>();
@@ -27,6 +25,7 @@ public class Main {
         for (Participant participant1 : participants) {
             for (Let let : lets) {
                 if (let.overcome(participant1)) {
+                    participant1.run(wall.getName());
                     System.out.println("Participants " + participant1.getName() + " passed the obstacle "
                             + let.getName() + " on size " + let.getSizeLet());
                 } else {
