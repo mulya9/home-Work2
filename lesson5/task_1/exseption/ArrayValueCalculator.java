@@ -2,18 +2,15 @@ package lesson5.task_1.exseption;
 
 public class ArrayValueCalculator {
     public static void main(String[] args) {
-        String[][] matrix = new String[][]{{"1", "6", "3", "9"}, {"u", "3", "7", "3"}, {"8", "5", "9", "2"}, {"3", "5", "2", "2"}};
+        String[][] matrix = new String[][]{{"1", "6", "3", "9"}, {"5", "3", "7", "3"}, {"8", "5", "9", "2"}, {"3", "5", "2", "2"}};
+        int result;
         try {
-            try {
-                int result = doCalc(matrix);
-                System.out.println(result);
-            } catch (ArraySizeException e) {
-                System.out.println("Array size is wrong,should be 4 be 4 !");
-            }
-        } catch (ArrayDataException e) {
-            System.out.println("Incorrect value!");
-            System.out.println("Cell error: " + e.i + " * " + e.j);
+            result = doCalc(matrix);
+            System.out.println("Sum of array numbers "+ result);
+        }catch (CustomException e){
+            e.printStackTrace(e.getMessage());
         }
+
 
     }
 
@@ -30,7 +27,7 @@ public class ArrayValueCalculator {
                 try {
                     size = size + Integer.parseInt(squareMatrix[i][j]);
                 } catch (NumberFormatException e) {
-                    throw new ArrayDataException(i, j);
+                    throw new ArrayDataException(i,j);
                 }
             }
 

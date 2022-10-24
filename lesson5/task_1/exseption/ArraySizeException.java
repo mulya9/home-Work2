@@ -1,22 +1,8 @@
 package lesson5.task_1.exseption;
 
-public class ArraySizeException extends Exception{
+public class ArraySizeException extends CustomException{
     public ArraySizeException() {
+        super("Array size is wrong,should be 4 be 4 ");
     }
 
-    public ArraySizeException(String message) {
-        super(message);
-    }
-
-    public ArraySizeException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public ArraySizeException(Throwable cause) {
-        super(cause);
-    }
-
-    public ArraySizeException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
 }
