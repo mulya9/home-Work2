@@ -1,44 +1,36 @@
 package lessons_17.task_16.stream_api;
 
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.time.LocalDate;
+import java.util.*;
 
 
 public class Main {
 
-
-
     public static void main(String[] args)  {
 
-        List<Product> products = Shop.getProducts();
+        ProductService productService= new ProductService();
 
-
-        List<Product> productList = products.stream()
-                .filter(Product.isCorrectTypeProduct.and(Product.isCorrectPrisesProduct))
-                .toList();
-
-
-        List<Product> productsDiscountPriseList = products.stream()
-                .filter(Product.isCorrectTypeProduct)
-                .map(Shop::doDiscount)
-                .toList();
-
-
-        Optional<Product> minPrise = products.stream()
-                .filter(Product.isCorrectTypeProduct )
-                .min(Comparator.comparing(Product::getPriseInCent));
-
-
-
-        printList(productList);
+        System.out.println((productService.listHashMapProduct(getProducts())));
+        System.out.println((productService.totalSumProductsInCategory(getProducts())));
+        System.out.println((productService.productList(getProducts())));
+        System.out.println((productService.priseByDiscount(getProducts())));
+        System.out.println((productService.minPriseProduct(getProducts())));
+        System.out.println((productService.lastThreeAddProduct(getProducts())));
     }
-    public static void printList(List<Product> list) {
-        for (Product l:list) {
-            System.out.println(l);
-        }
+
+
+
+    static List<Product> PRODUCTS = Arrays.asList(
+            new Product(1,ProductType.BOOK,255,10, LocalDate.of(2021,10,29)),
+            new Product(2,ProductType.TOY,246,13, LocalDate.of(2022,11,14)),
+            new Product(3,ProductType.MEAT,268,10, LocalDate.of(2022,9,27)),
+            new Product(4,ProductType.BREAD,210,9, LocalDate.of(2022,10,8)),
+            new Product(5,ProductType.FRUITS,156,10, LocalDate.of(2022,12,17)),
+            new Product(6,ProductType.BOOK,246,17, LocalDate.of(2021,11,13)));
+
+    public static List<Product> getProducts() {
+        return new ArrayList<>(PRODUCTS);
     }
 
 }
